@@ -1,0 +1,17 @@
+{
+  "name": "খামার ম্যানেজিং",
+  "short_name": "খামার",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f8f5",
+  "theme_color": "#176b45",
+  "description": "স্মার্ট খামার ব্যবস্থাপনা",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

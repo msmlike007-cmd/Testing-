@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#176b45">
+  <meta name="description" content="খামার ম্যানেজিং — স্মার্ট খামার ব্যবস্থাপনা">
+  <title>খামার ম্যানেজিং</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" data-page="dashboard" aria-label="Home">
+      <img src="icon.svg" alt="" class="brand-icon">
+      <span><b data-i18n="appName">খামার ম্যানেজিং</b><small data-i18n="tagline">স্মার্ট খামার, সমৃদ্ধ জীবন</small></span>
+    </button>
+    <div class="top-actions">
+      <span id="onlineStatus" class="status">● অফলাইন-প্রস্তুত</span>
+      <button class="icon-btn" id="langBtn" title="Language">EN</button>
+      <button class="icon-btn" id="themeBtn" title="Theme">◐</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav id="nav"></nav>
+      <div class="sidebar-foot">
+        <div class="ad-placeholder"><small data-i18n="sponsor">স্পন্সর / বিজ্ঞাপন</small><b data-i18n="adEmpty">এখানে ভবিষ্যতে বিজ্ঞাপন দেখানো যাবে</b></div>
+        <small>Version 1.0 · Local-first PWA</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="mobile-nav-wrap"><select id="mobileNav" aria-label="Navigate"></select></div>
+      <section id="view" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <dialog id="recordDialog">
+    <form method="dialog" id="recordForm">
+      <div class="dialog-head"><h2 id="dialogTitle">নতুন তথ্য</h2><button class="icon-btn" value="cancel" aria-label="Close">✕</button></div>
+      <div id="formFields" class="form-grid"></div>
+      <div class="dialog-actions"><button type="button" class="btn secondary" id="cancelForm">বাতিল</button><button type="submit" class="btn primary">সংরক্ষণ</button></div>
+    </form>
+  </dialog>
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
